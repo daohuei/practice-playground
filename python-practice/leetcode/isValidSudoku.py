@@ -8,13 +8,13 @@ def isValidSudoku(board: list()) -> bool:
                     row[i] = []
                 if j not in col.keys():
                     col[j] = []
-                if (i//3, j//3) not in block.keys():
-                    block[i//3, j//3] = []
-                if num in row[i] or num in col[j] or num in block[(i//3, j//3)]:
+                if (i // 3, j // 3) not in block.keys():
+                    block[i // 3, j // 3] = []
+                if num in row[i] or num in col[j] or num in block[(i // 3, j // 3)]:
                     return False
                 row[i].append(num)
                 col[j].append(num)
-                block[i//3, j//3].append(num)
+                block[i // 3, j // 3].append(num)
     return True
 
 
@@ -27,7 +27,7 @@ valid_s = [
     ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
     [".", "6", ".", ".", ".", ".", "2", "8", "."],
     [".", ".", ".", "4", "1", "9", ".", ".", "5"],
-    [".", ".", ".", ".", "8", ".", ".", "7", "9"]
+    [".", ".", ".", ".", "8", ".", ".", "7", "9"],
 ]
 invalid_s = [
     ["8", "3", ".", ".", "7", ".", ".", ".", "."],
@@ -38,7 +38,7 @@ invalid_s = [
     ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
     [".", "6", ".", ".", ".", ".", "2", "8", "."],
     [".", ".", ".", "4", "1", "9", ".", ".", "5"],
-    [".", ".", ".", ".", "8", ".", ".", "7", "9"]
+    [".", ".", ".", ".", "8", ".", ".", "7", "9"],
 ]
 print(isValidSudoku(valid_s))
 print(isValidSudoku(invalid_s))

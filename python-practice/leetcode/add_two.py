@@ -41,7 +41,7 @@ def reverse_listnode(l):
     return new_head
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     """
     Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
     Output: 7 -> 0 -> 8
@@ -49,8 +49,8 @@ if __name__ == '__main__':
     """
     l1 = ListNode(2, ListNode(4, ListNode(3)))
     l2 = ListNode(5, ListNode(6, ListNode(4)))
-    #l1 = ListNode(1,ListNode(8))
-    #l2 = ListNode(0)
+    # l1 = ListNode(1,ListNode(8))
+    # l2 = ListNode(0)
     result_list = add_two(l1, l2)
     result_cur = result_list
     result = ""

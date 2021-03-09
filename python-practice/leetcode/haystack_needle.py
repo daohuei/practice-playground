@@ -27,8 +27,8 @@ def strStr2(haystack: str, needle: str) -> int:
             len_n = len(needle)
             len_h = len(haystack)
             diff = len_h - len_n
-            for i in range(diff+1):
-                if haystack[i:i+len_n] == needle:
+            for i in range(diff + 1):
+                if haystack[i : i + len_n] == needle:
                     return i
         return -1
 

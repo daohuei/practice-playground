@@ -3,7 +3,7 @@ def combinationSum2(candidates: list(), target: int) -> list():
     ans = {}
     if candidates[0] > target:
         return []
-    for i in range(target+1):
+    for i in range(target + 1):
         ans[i] = []
     for i in range(len(candidates)):
         s = candidates[i]
@@ -31,7 +31,7 @@ def remove(ans_target, candi):
         s = 0
         if n in nhmap.keys():
             s = nhmap[n]
-        nhmap[n] = s+1
+        nhmap[n] = s + 1
     for i in range(len(ans_target)):
         l = ans_target[i]
         temp = {}
@@ -39,7 +39,7 @@ def remove(ans_target, candi):
             s = 0
             if n in temp.keys():
                 s = temp[n]
-            temp[n] = s+1
+            temp[n] = s + 1
         for n in l:
             if temp[n] > nhmap[n]:
                 ans.remove(l)

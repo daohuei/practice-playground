@@ -4,10 +4,11 @@ when other users are modifying the checking text file
 """
 import time
 import hashlib
+
 original_md5 = ""
 
 
-file_name = 'text.txt'
+file_name = "text.txt"
 while True:
     # Open,close, read file and calculate MD5 on its contents
     with open(file_name, "rb") as file_to_check:

@@ -2,7 +2,7 @@ def combinationSum(candidates: list(), target: int) -> list():
     ans = {}
     if candidates[0] > target:
         return []
-    for i in range(target+1):
+    for i in range(target + 1):
         ans[i] = []
     for i in range(len(candidates)):
         s = candidates[i]

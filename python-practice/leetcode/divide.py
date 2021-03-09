@@ -7,11 +7,11 @@ def divide(dividend: int, divisor: int) -> int:
         divisor *= -1
         sign *= -1
     if divisor == 1:
-        ret = dividend*sign
+        ret = dividend * sign
     else:
         result = 0
         while (divisor * 2) <= dividend:
-            big_div = divisor*2
+            big_div = divisor * 2
             count = 0
 
             while dividend >= big_div:
@@ -19,8 +19,8 @@ def divide(dividend: int, divisor: int) -> int:
                 count += 1
 
             if count > 0:
-                result += (2**(count))
-                dividend -= (big_div / 2)
+                result += 2 ** (count)
+                dividend -= big_div / 2
         while dividend >= divisor:
             dividend -= divisor
             result += 1
@@ -28,8 +28,8 @@ def divide(dividend: int, divisor: int) -> int:
         ret = result * sign
     if ret > 0x7FFFFFFF:
         return 0x7FFFFFFF
-    if ret < -0x7FFFFFFF-1:
-        return -0x7FFFFFFF-1
+    if ret < -0x7FFFFFFF - 1:
+        return -0x7FFFFFFF - 1
     return ret
 
 
