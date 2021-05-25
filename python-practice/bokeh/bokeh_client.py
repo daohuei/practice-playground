@@ -32,3 +32,4 @@ with pull_session(url="http://localhost:5006/mp4_upload") as session:
     session = push_session(
         doc, session_id=session.id, url="http://localhost:5006/mp4_upload"
     )
+    session.show()
