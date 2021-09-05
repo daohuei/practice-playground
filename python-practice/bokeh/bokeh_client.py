@@ -4,6 +4,8 @@ from bokeh.embed import server_session
 from bokeh.plotting import figure, ColumnDataSource
 
 
+doc = None
+session_id = None
 with pull_session(url="http://localhost:5006/mp4_upload") as session:
 
     doc = session.document
@@ -29,7 +31,8 @@ with pull_session(url="http://localhost:5006/mp4_upload") as session:
     print(session.id)
     doc.title = "Now with live updating!"
     doc.add_root(fig)
-    session = push_session(
-        doc, session_id=session.id, url="http://localhost:5006/mp4_upload"
-    )
-    session.show()
+
+session = push_session(
+    doc, session_id=session_id, url="http://localhost:5006/mp4_upload"
+)
+session.show()

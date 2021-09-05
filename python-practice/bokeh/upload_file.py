@@ -33,7 +33,7 @@ def main():
     io_loop = IOLoop.current()
     bokeh_app = Application(FunctionHandler(modify_doc))
 
-    server = Server({"/": bokeh_app}, io_loop=io_loop, prefix="mp4_upload")
+    server = Server({"/": bokeh_app}, io_loop=io_loop)
     server.start()
     print("Opening Bokeh application on http://localhost:5006/")
 
